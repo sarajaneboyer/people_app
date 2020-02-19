@@ -17,10 +17,10 @@ require 'faker'
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     age: rand(18...65),
-    hair_color: Faker::Color.hsla_color,
-    eye_color: Faker::Color.hsla_color,
-    gender: rand(2) == 1 ? "F" : "M",
-    alive: random_boolean = [true,false].sample
+    hair_color: Faker::Color.color_name,
+    eye_color: Faker::Color.color_name,
+    gender: Faker::Gender.binary_type
+    alive: Faker::Boolean.boolean
   )
 end
   

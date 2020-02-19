@@ -1,2 +1,12 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1> Showing One Person </h1>
+<h3><%= @person.first_name %>
+<%= @person.last_name %></h3>
+<p>
+  <%= @person.age %>
+  <%= @person.hair_color %>
+  <%= @person.eye_color %>
+  <%= @person.gender %>
+  <%= @person.alive %>
+</p>
+<%= link_to 'Back', people_path %>
+
