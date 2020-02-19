@@ -14,32 +14,13 @@ require 'faker'
 # t.boolean "friend"
 10.times do 
   contact = Person.create(
-    first_name: Faker::Person.first_name,
-    last_name: Faker::Person.last_name,
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
     age: rand(18...65),
-    hair_color: Faker::Person.hair_color,
-    eye_color: Faker::Person.eye_color,
-    gender: rand(2) == 1 ? F : M,
+    hair_color: Faker::Color.hsla_color,
+    eye_color: Faker::Color.hsla_color,
+    gender: rand(2) == 1 ? "F" : "M",
     alive: random_boolean = [true,false].sample
   )
 end
-  # has one address create it
-  # t.string "state"
-  # t.string "city"
-  # t.string "zip"
   
-  # contact.create_address(
-  #   city: Faker::Address.city, 
-  #   state: Faker::Address.state, 
-  #   zip: Faker::Address.zip_code
-  # )
-  # Has many notes lets make number of notes random for each contact
-  # num_notes = rand(1..3)
-  # messages = [
-  #   Faker::Hipster.sentences(number: 1), 
-  #   Faker::Quote.famous_last_words,
-  #   Faker::ChuckNorris.fact,
-  # ]
-  # num_notes.times do |i|
-  #   contact.notes.create(body: messages[i])
-  # end
