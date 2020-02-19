@@ -13,9 +13,9 @@ require 'faker'
 # t.string "last_name"
 # t.boolean "friend"
 10.times do 
-  contact = Contact.create(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
+  contact = Person.create(
+    first_name: Faker::Person.first_name,
+    last_name: Faker::Person.last_name,
     age: rand(18...65),
     hair_color: Faker::Person.hair_color,
     eye_color: Faker::Person.eye_color,
