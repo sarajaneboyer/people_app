@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   def index
-    @person = Person.all
+    @people = Person.all
   end
 
   def show
@@ -14,12 +14,6 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(people_params)
 
-    if @person.save
-      redirect_to people_path
-    else
-      render :new
-    end
-
   end
 
   def edit
@@ -27,6 +21,11 @@ class PeopleController < ApplicationController
   end
 
   def update
+    if @person.save
+      redirect_to people_path
+    else
+      render :new
+    end
   end
 
   def destroy
