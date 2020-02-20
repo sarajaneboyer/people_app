@@ -19,7 +19,7 @@ require 'faker'
     age: rand(18...65),
     hair_color: Faker::Color.color_name,
     eye_color: Faker::Color.color_name,
-    gender: Faker::Gender.binary_type
+    gender: Faker::Gender.binary_type,
     alive: Faker::Boolean.boolean
   )
 end

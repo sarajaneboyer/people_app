@@ -1,12 +1,14 @@
 <h1> Showing One Person </h1>
-<h3><%= @person.first_name %>
-<%= @person.last_name %></h3>
+<hr />
+
+<h3><%= 'Name: ' + @person.first_name + ' ' + @person.last_name%></h3>
+
 <p>
-  <%= @person.age %>
-  <%= @person.hair_color %>
-  <%= @person.eye_color %>
-  <%= @person.gender %>
-  <%= @person.alive %>
+  <%= 'Age: ' %><%= @person.age %><br />
+  <%= 'Hair Color: ' + @person.hair_color %><br />
+  <%= 'Eye Color: ' + @person.eye_color %><br />
+  <%= 'Gender: ' + @person.gender %><br />
+  <%= 'They are alive? ' %><%= @person.alive %>
 </p>
-<%= link_to 'Back', people_path %>
+<h2><%= link_to 'Back to Home', people_path %></h2>
 
