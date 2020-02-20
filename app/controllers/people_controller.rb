@@ -21,7 +21,7 @@ class PeopleController < ApplicationController
   end
 
   def update
-    if @person.save
+    if @person.update(people_params)
       redirect_to people_path
     else
       render :new
